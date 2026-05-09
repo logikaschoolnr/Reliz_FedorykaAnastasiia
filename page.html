@@ -1,0 +1,53 @@
+</head>
+<body>
+
+<header>
+    <h1>🇯🇵 Японія</h1>
+    <nav>
+        <a href="#">Головна</a>
+        <a href="#">Культура</a>
+        <a href="#">Міста</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Країна сакури, технологій і традицій 🌸</h2>
+</section>
+
+<section class="container">
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZJG9KucZ4hkV25z2JndxHvgcECKmzTJYymA&s">
+        <h3>Токіо</h3>
+        <p>Сучасна столиця з неоновими вогнями та хмарочосами.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEMHU-k96qnDDlRcT8DxyjOtxeUqNkAH-rHA&s">
+        <h3>Храми</h3>
+        <p>Давні святині та духовна культура Японії.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5-PRhTXbaNJXzdp9agwT3Wty88QNtMbcc0A&s">
+        <h3>Сакура</h3>
+        <p>Весняне цвітіння, яке символізує красу життя.</p>
+    </div>
+
+</section>
+
+<script>
+// падаючі сакури
+for(let i=0;i<20;i++){
+    let sakura=document.createElement("div");
+    sakura.classList.add("sakura");
+    sakura.innerHTML="🌸";
+    sakura.style.left=Math.random()*100+"vw";
+    sakura.style.animationDuration=(3+Math.random()*5)+"s";
+    sakura.style.fontSize=(10+Math.random()*20)+"px";
+    document.body.appendChild(sakura);
+}
+</script>
+
+</body>
+</html>
