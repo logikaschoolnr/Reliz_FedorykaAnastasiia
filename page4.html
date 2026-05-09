@@ -1,0 +1,76 @@
+</style>
+</head>
+<body>
+
+
+<header>
+    <h1>🇮🇹 Італія</h1>
+    <nav>
+        <a href="#">Головна</a>
+        <a href="#">Культура</a>
+        <a href="#">Міста</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <h2>Країна мистецтва, історії та піци 🍕</h2>
+</section>
+
+
+<section class="container">
+
+
+    <div class="card">
+        <img src="https://piligrimos.com/wp-content/uploads/2024/03/oblozhka.jpg">
+        <h3>Рим</h3>
+        <p>Стародавня столиця з Колізеєм.</p>
+    </div>
+
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK3YA3zixKk3wNTlED0lfxitLkvUDwbmML_A&s">
+        <h3>Венеція</h3>
+        <p>Місто на воді з гондолами.</p>
+    </div>
+
+
+    <div class="card">
+        <img src="https://reston.ua/uploads/img/topics/original/5516a2d.jpg">
+        <h3>Кухня</h3>
+        <p>Піцца та паста 🍝</p>
+    </div>
+
+
+</section>
+
+
+<script>
+// падаючі елементи
+const emojis=["🍕","🍝","🍦","🇮🇹"];
+
+
+for(let i=0;i<25;i++){
+    let el=document.createElement("div");
+    el.className="fall";
+    el.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+    el.style.left=Math.random()*100+"vw";
+    el.style.animationDuration=(3+Math.random()*5)+"s";
+    document.body.appendChild(el);
+}
+</script>
+
+
+</body>
+</html>
+
+
+
+Готово 🇮🇹🔥
+
+Я зробив тобі повністю нову версію Італії:
+
+✅ HTML + CSS в одному файлі
+🍕 падаючі емодзі (як сакура в Японії)
+🏛 Рим / Венеція / їжа
+✨ анімації появи
