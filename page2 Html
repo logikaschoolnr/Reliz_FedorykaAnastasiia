@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Франція</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(120deg,#e3f2fd,#fce4ec);
+    overflow-x:hidden;
+}
+
+/* ===== ШАПКА ===== */
+header{
+    background:#0055a4;
+    color:white;
+    text-align:center;
+    padding:20px;
+    animation:slideDown 1s ease;
+}
+
+nav a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffd54f;
+    transform:scale(1.1);
+}
+
+/* ===== HERO ===== */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    color:white;
+    background:url('https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg') center/cover;
+    animation:fadeIn 2s ease;
+}
+
+/* ===== КАРТКИ ===== */
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    width:280px;
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.4s;
+    animation:pop 1s ease;
+}
+
+.card:hover{
+    transform:scale(1.05) rotate(1deg);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* ===== АніМАЦІЇ ===== */
+@keyframes fadeIn{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+@keyframes slideDown{
+    from{transform:translateY(-100%);opacity:0}
+    to{transform:translateY(0);opacity:1}
+}
+
+@keyframes pop{
+    from{transform:scale(0.8);opacity:0}
+    to{transform:scale(1);opacity:1}
+}
+
+/* ===== ПАДАЮЧІ ЕЛЕМЕНТИ ===== */
+.fall{
+    position:fixed;
+    top:-10px;
+    font-size:22px;
+    animation:drop linear infinite;
+    pointer-events:none;
+}
+
+@keyframes drop{
+    0%{transform:translateY(0) rotate(0deg);opacity:1}
+    100%{transform:translateY(100vh) rotate(360deg);opacity:0}
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>🇫🇷 Франція</h1>
+    <nav>
+        <a href="#">Головна</a>
+        <a href="#">Культура</a>
+        <a href="#">Міста</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Країна мистецтва, моди та романтики 🗼</h2>
+</section>
+
+<section class="container">
+
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg">
+        <h3>Париж</h3>
+        <p>Столиця моди та Ейфелева вежа.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/P1080137_Paris_Ier_pavillon_de_l%27Horloge_du_Louvre_rwk.jpg">
+        <h3>Лувр</h3>
+        <p>Один з найбільших музеїв світу.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLr06TlRp0gz7yFT4u2zmAlk03VEdmi8Lwg&s">
+        <h3>Кухня</h3>
+        <p>Круасани, вино та сир 🥐🍷</p>
+    </div>
+
+</section>
+
+<script>
+const emojis = ["🥐","🍷","🗼","🇫🇷"];
+
+for(let i=0;i<25;i++){
+    let el=document.createElement("div");
+    el.className="fall";
+    el.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+    el.style.left=Math.random()*100+"vw";
+    el.style.animationDuration=(3+Math.random()*5)+"s";
+    el.style.fontSize=(15+Math.random()*25)+"px";
+    document.body.appendChild(el);
+}
+</script>
+
+</body>
+</html>
