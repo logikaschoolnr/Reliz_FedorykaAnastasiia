@@ -1,0 +1,47 @@
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🌍 Подорож світом</h1>
+    <p>Оберіть країну для перегляду</p>
+</header>
+
+<section class="container">
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfRlbtcqAzUKBFtqKbZGq7vFhHT1vFDE0yCA&s">
+        <h2>Японія 🇯🇵</h2>
+        <a href="japan.html">Перейти</a>
+    </div>
+
+    <div class="card">
+        <img src="https://lh4.googleusercontent.com/proxy/Da4RxGGJWE46cv9DrOdtiXLGl4IeHDkN2YkfXiOGr8aG_q7yoQkDvyJefieeiNcyObAAvl3jNhDkC0EpbdkL8fORH6HRZubkIjYAAF11LvRd9KJjbGsUmzFK3IWZicDl2sksravD8FHbDQe98y4q9aiiEUhnpEgr7CdUXl6wLqBK_VipGRlJUxUG8jJSK7HdU9hD_gXQkrKvJrA717fMYq1fv6bGL-s1I0h6qho5DhCB8E8uBmWCKIcryA">
+        <h2>Італія 🇮🇹</h2>
+        <a href="italy.html">Перейти</a>
+    </div>
+
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg">
+        <h2>Франція 🇫🇷</h2>
+        <a href="france.html">Перейти</a>
+    </div>
+
+</section>
+
+<script>
+const emojis = ["🌍","✈️","🗺️","🏰","🍕","🍣"];
+
+for(let i=0;i<30;i++){
+    let el=document.createElement("div");
+    el.className="fall";
+    el.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+    el.style.left=Math.random()*100+"vw";
+    el.style.animationDuration=(3+Math.random()*5)+"s";
+    el.style.fontSize=(15+Math.random()*25)+"px";
+    document.body.appendChild(el);
+}
+</script>
+
+</body>
+</html>
